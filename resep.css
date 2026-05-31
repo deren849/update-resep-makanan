@@ -1,0 +1,257 @@
+header {
+    box-sizing: border-box;
+    background-color: #1a1a1a;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: -30px;
+    text-transform: uppercase;
+    
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #525252;
+    overflow-x: hidden;
+}
+
+aside {
+    position: relative;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    text-align: center;
+    margin: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+aside img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+aside::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    z-index: 2;
+}
+
+aside p {
+    position: relative;
+    z-index: 3;
+    font-size: 4vw;
+    max-width: 80%;
+    margin: 0 auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+nav {
+    background-color: #262626;
+    padding: 10px 0;
+    z-index: 9999;
+    margin-bottom: 50px;
+}
+
+nav ul {
+    display: flex;           
+    justify-content: center; 
+    list-style: none;       
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+nav li:hover {
+    background-color: #2f362e;
+    transform: scale(0.9);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #322f2f;
+    transition: background-color 0.3s;
+    display: inline-block;   
+}
+
+nav a:hover {
+    background-color: #373837;
+}
+
+main {
+    padding: 20px;
+    background-color: #383636;
+    position: relative;
+    z-index: 10;
+    border-radius: 30px 30px 0 0;
+    padding: 40px 20px;
+    box-shadow: 0 -10px 20px rgba(0,0,0,0.1);
+    margin-top: -50px;
+}
+
+main h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+main p {
+    font-size: 30px;
+    line-height: 1.6rem;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+}
+
+.deskripsi-halaman {
+    box-sizing: border-box;
+    font-size: 24px;
+    margin-bottom: 0px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #313330;
+    width: 100%;
+    text-transform: uppercase;
+    color: white;
+    padding: 20px;
+}
+
+.grid-card {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.flex-items {
+    background-color: #2d2a2a;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.resep-card {
+    background-color: rgb(106, 95, 95);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 320px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    color: white;
+    text-shadow: #1a1a1a 1px 1px 2px;
+    gap: 50px;
+}
+
+.resep-card h2 {
+    font-size: 22px;
+    text-align: left;
+}
+
+.resep-card p {
+    margin: 10px 0;
+    width: 100%;
+    text-align: left;
+    font-size: 16px;
+}
+
+.resep-card ul, .resep-card ol {
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.resep-card:hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transform: scale(1.05);
+    transition: transform 0.3s, box-shadow 0.3s ease;
+}
+
+footer {
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 0px;
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        font-size: 0.7rem;
+    }
+
+    .deskripsi-halaman {
+        font-size: 1.2rem;
+    }
+
+    .flex-items {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .resep-card {
+        max-width: 100%;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    nav li {
+        margin: 0;
+    }
+
+    aside {
+        height: 350px;
+    }
+
+    aside p {
+        font-size: 1.8rem;
+    }
+
+    nav a {
+        background-color: rgb(61, 61, 61);
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    aside {
+        height: 550px;
+        
+    }
+    
+    aside p {
+        font-size: 2rem;
+    }
+}
