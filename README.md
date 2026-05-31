@@ -2,6 +2,6 @@
 
 update change :
 
--mengoptimalkan UX
--memperbaiki bug
--memperbagus UI
+:mengoptimalkan UX
+:memperbaiki bug
+:memperbagus UI
